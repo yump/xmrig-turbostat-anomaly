@@ -1,0 +1,48 @@
+background: sleep infinity
+    benchmark finished in 113.102 seconds (8841.6 h/s)
+    benchmark finished in 113.286 seconds (8827.2 h/s)
+    benchmark finished in 113.460 seconds (8813.7 h/s)
+    benchmark finished in 113.615 seconds (8801.7 h/s)
+    benchmark finished in 116.686 seconds (8570.0 h/s)
+
+background: sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.2
+    benchmark finished in 101.475 seconds (9854.6 h/s)
+    benchmark finished in 101.774 seconds (9825.7 h/s)
+    benchmark finished in 102.877 seconds (9720.3 h/s)
+    benchmark finished in 103.429 seconds (9668.5 h/s)
+    benchmark finished in 104.893 seconds (9533.5 h/s)
+
+background: sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.1
+    benchmark finished in 100.455 seconds (9954.7 h/s)
+    benchmark finished in 100.600 seconds (9940.4 h/s)
+    benchmark finished in 101.194 seconds (9882.0 h/s)
+    benchmark finished in 101.268 seconds (9874.8 h/s)
+    benchmark finished in 103.229 seconds (9687.2 h/s)
+
+background: sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.05
+    benchmark finished in 100.296 seconds (9970.5 h/s)
+    benchmark finished in 100.417 seconds (9958.5 h/s)
+    benchmark finished in 101.929 seconds (9810.8 h/s)
+    benchmark finished in 103.652 seconds (9647.7 h/s)
+    benchmark finished in 104.004 seconds (9615.0 h/s)
+
+background: sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.2
+    benchmark finished in 101.409 seconds (9861.1 h/s)
+    benchmark finished in 101.597 seconds (9842.8 h/s)
+    benchmark finished in 101.736 seconds (9829.4 h/s)
+    benchmark finished in 101.751 seconds (9827.9 h/s)
+    benchmark finished in 103.182 seconds (9691.6 h/s)
+
+background: sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.1
+    benchmark finished in 100.001 seconds (9999.9 h/s)
+    benchmark finished in 100.405 seconds (9959.7 h/s)
+    benchmark finished in 100.794 seconds (9921.2 h/s)
+    benchmark finished in 101.872 seconds (9816.2 h/s)
+    benchmark finished in 102.316 seconds (9773.6 h/s)
+
+background: sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.05
+    benchmark finished in 100.386 seconds (9961.5 h/s)
+    benchmark finished in 100.956 seconds (9905.3 h/s)
+    benchmark finished in 101.070 seconds (9894.1 h/s)
+    benchmark finished in 101.113 seconds (9889.9 h/s)
+    benchmark finished in 102.871 seconds (9720.9 h/s)
