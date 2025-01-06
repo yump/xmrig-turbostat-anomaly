@@ -46,3 +46,44 @@ background: sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.05
     benchmark finished in 101.070 seconds (9894.1 h/s)
     benchmark finished in 101.113 seconds (9889.9 h/s)
     benchmark finished in 102.871 seconds (9720.9 h/s)
+
+background: ./ecore-tickler.py --timing stagger --interval 0.1
+    benchmark finished in 101.254 seconds (9876.2 h/s)
+    benchmark finished in 102.446 seconds (9761.2 h/s)
+    benchmark finished in 103.412 seconds (9670.1 h/s)
+    benchmark finished in 104.269 seconds (9590.6 h/s)
+    benchmark finished in 105.303 seconds (9496.4 h/s)
+
+## Tests comparing --cpu-yield off vs on
+
+'yield': true
+
+background: sleep infinity
+    benchmark finished in 111.816 seconds (8943.3 h/s)
+    benchmark finished in 114.923 seconds (8701.5 h/s)
+    benchmark finished in 115.839 seconds (8632.7 h/s)
+    benchmark finished in 116.684 seconds (8570.2 h/s)
+    benchmark finished in 117.448 seconds (8514.4 h/s)
+
+background: sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.1
+    benchmark finished in 99.863 seconds (10013.7 h/s)
+    benchmark finished in 100.373 seconds (9962.8 h/s)
+    benchmark finished in 101.395 seconds (9862.4 h/s)
+    benchmark finished in 101.580 seconds (9844.5 h/s)
+    benchmark finished in 102.184 seconds (9786.3 h/s)
+
+'yield': false
+
+background: sleep infinity
+    benchmark finished in 114.884 seconds (8704.4 h/s)
+    benchmark finished in 115.053 seconds (8691.6 h/s)
+    benchmark finished in 116.966 seconds (8549.5 h/s)
+    benchmark finished in 117.159 seconds (8535.4 h/s)
+    benchmark finished in 119.517 seconds (8367.0 h/s)
+
+background: sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.1
+    benchmark finished in 100.337 seconds (9966.4 h/s)
+    benchmark finished in 100.622 seconds (9938.2 h/s)
+    benchmark finished in 100.903 seconds (9910.5 h/s)
+    benchmark finished in 101.042 seconds (9896.9 h/s)
+    benchmark finished in 101.459 seconds (9856.2 h/s)

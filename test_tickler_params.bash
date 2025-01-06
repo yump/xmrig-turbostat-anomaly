@@ -27,14 +27,21 @@ test_with_background_command () {
 sudo cpupower frequency-set -g performance
 sudo cpupower set --perf-bias 0
 
+#test_with_background_command sleep infinity
+#
+#test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.2
+#test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.1
+#test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.05
+#
+#test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.2
+#test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.1
+#test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.05
+
+#test_with_background_command ./ecore-tickler.py --timing stagger --interval 0.1
+
+read -p "remove 'yield':false from config.json, plz" _
 test_with_background_command sleep infinity
-
-test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.2
-test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.1
-test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing sync --interval 0.05
-
-test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.2
 test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.1
-test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.05
-
-test_with_background_command ./ecore-tickler.py --timing stagger --interval 0.1
+read -p "add 'yield':false to config.json, plz" _
+test_with_background_command sleep infinity
+test_with_background_command sudo chrt 1 ./ecore-tickler.py --timing stagger --interval 0.1
